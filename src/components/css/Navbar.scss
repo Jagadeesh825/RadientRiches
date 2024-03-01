@@ -1,0 +1,85 @@
+.custom-nav {
+    background-color: #212731;
+    height: 64px;
+    width: 100%;
+
+    .custom-content {
+        color: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-left: 300px;
+        margin-right: 300px;
+
+        @media only screen and (max-width: 768px) {
+            margin: 0; /* Reset margin for mobile devices */
+            flex-direction: column; /* Stack elements vertically on small screens */
+            align-items: center; /* Center elements horizontally */
+        }
+    }
+
+    .custom-search {
+        margin-top: 10px;
+        position: relative;
+        display: flex;
+        background-color: white;
+        align-items: center;
+        border-radius: 8px;
+        width: 258px;
+        padding-left: 10px;
+        margin-top: 14px;
+        height: 37px;
+
+        .custom-input {
+            border:  #E1E4E6; /* Specify solid border */
+            color: rgb(0, 0, 0);
+            font-size: 15px;
+            border-radius: 5px;
+            width: 250px;
+            height: 20px;
+            padding: 4px; /* Add padding for better appearance */
+            outline: none; /* Remove default input focus outline */
+            
+            /* Add transition for smooth change */
+            transition: border-color 0.3s ease-in-out;
+            
+            /* On focus, change border color */
+            &:focus {
+                border-color: #5E9FFF; /* Example color */
+            }
+        }
+        
+
+        @media only screen and (max-width: 768px) {
+            width: 100%; /* Make search bar full width on mobile */
+            margin: 10px 0; /* Adjust margin for mobile */
+        }
+    }
+
+    .custom-category {
+        padding-top: 10px;
+        font-size: 14px;
+        font-weight: 400;
+        font-family: "Inter";
+        color: #D1D6DA;
+        cursor: pointer;
+        display: inline-block;
+
+        &:not(:last-child) {
+            margin-right: 10px; /* Add spacing between categories */
+        }
+
+        @media only screen and (max-width: 768px) {
+            margin: 10px 0; /* Adjust margin for mobile */
+            text-align: center; /* Center text for mobile */
+        }
+    }
+
+    .custom-left {
+        padding-left: 10px;
+
+        @media only screen and (max-width: 768px) {
+            padding-left: 0; /* Reset padding for mobile */
+        }
+    }
+}
